@@ -7,9 +7,6 @@
     "files": [
         "dist"
     ],
-    "engines": {
-        "node": ">=14.0.0"
-    },
     "repository": {
         "type": "git",
         "url": "https://github.com/Nerixyz/mqtts"
@@ -20,49 +17,44 @@
     "scripts": {
         "test": "jest",
         "build": "rimraf dist && tsc -p tsconfig.build.json",
-        "prepare": "npm run build",
+        "prepare": "yarn run build",
         "lint": "eslint --fix --ext .js,.ts src/**",
         "format": "prettier --write \"src/**/*.ts\" --loglevel warn",
-        "typecheck": "tsc -p tsconfig.build.json --noEmit",
-        "precommit": "npm run typecheck && npm run lint && npm run format"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "pretty-quick --staged"
-        }
-    },
-    "dependencies": {
-        "@types/ws": "^7.2.5",
-        "debug": "^4.1.1",
-        "eventemitter3": "^4.0.4",
-        "socks": "^2.5.0",
-        "ts-custom-error": "^3.1.1",
-        "ts-xor": "^1.0.8",
-        "ws": "^7.3.0"
+        "typecheck": "tsc -p tsconfig.build.json --noEmit"
     },
     "devDependencies": {
-        "@types/chai": "^4.2.11",
-        "@types/chai-as-promised": "^7.1.2",
+        "@types/chai": "^4.2.18",
+        "@types/chai-as-promised": "^7.1.4",
         "@types/debug": "^4.1.5",
         "@types/duplexify": "^3.6.0",
-        "@types/jest": "^26.0.0",
-        "@types/node": "^14.14.35",
-        "@types/sinon": "^9.0.4",
-        "@typescript-eslint/eslint-plugin": "4.18.0",
-        "@typescript-eslint/parser": "^4.18.0",
-        "chai": "^4.2.0",
+        "@types/jest": "^26.0.23",
+        "@types/node": "^15.0.3",
+        "@types/sinon": "^10.0.0",
+        "@typescript-eslint/eslint-plugin": "^4.23.0",
+        "@typescript-eslint/parser": "^4.23.0",
+        "chai": "^4.3.4",
         "chai-as-promised": "^7.1.1",
         "duplexify": "^4.1.1",
-        "eslint": "^7.22.0",
-        "eslint-config-prettier": "^8.1.0",
-        "husky": "^5.2.0",
-        "jest": "^26.0.1",
-        "prettier": "^2.0.5",
-        "pretty-quick": "^3.1.0",
+        "eslint": "^7.26.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "nodemon": "^2.0.7",
+        "prettier": "^2.3.0",
         "rimraf": "^3.0.2",
-        "sinon": "^9.0.2",
-        "ts-jest": "^26.5.4",
-        "typescript": "^4.2.3"
+        "sinon": "^10.0.0",
+        "ts-jest": "^26.5.6",
+        "ts-node": "^9.1.1",
+        "typescript": "^4.2.4"
+    },
+    "dependencies": {
+        "@types/ws": "^7.4.4",
+        "debug": "^4.3.1",
+        "eventemitter3": "^4.0.7",
+        "socks": "^2.6.1",
+        "ts-custom-error": "^3.2.0",
+        "ts-xor": "^1.0.8",
+        "tslog": "^3.2.0",
+        "ws": "^7.4.5"
     },
     "keywords": [
         "MQTT",
